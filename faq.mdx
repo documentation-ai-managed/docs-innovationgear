@@ -1,0 +1,151 @@
+---
+title: Frequently Asked Questions
+description: Common questions and answers about using FastMindMap to help troubleshoot and optimize your experience.
+---
+
+## Common Account and Access Issues
+
+FastMindMap stores your maps securely in the cloud. Access problems often stem from browser settings or network restrictions.
+
+<Columns cols={2}>
+  <Card title="Forgot Password?" icon="key" href="#forgot-password">
+    Reset your account access quickly.
+  </Card>
+  <Card title="Login Loops" icon="refresh-cw" href="#login-loops">
+    Fix endless redirect issues.
+  </Card>
+</Columns>
+
+<ExpandableGroup>
+  <Expandable title="How do I reset my forgotten password?" default-open="true">
+
+Follow these steps to regain access:
+
+<Steps>
+  <Step title="Navigate to Login" icon="log-in">
+    Go to the FastMindMap login page at `https://app.fastmindmap.com/login`.
+  </Step>
+  <Step title="Click Forgot Password" icon="alert-circle">
+    Enter your email address and select the reset option.
+  </Step>
+  <Step title="Check Email" icon="mail">
+    Open your inbox (including spam) for the reset link.
+  </Step>
+  <Step title="Set New Password" icon="shield-check">
+    Create a strong password with at least 12 characters, including uppercase, lowercase, numbers, and symbols.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable two-factor authentication (2FA) after resetting to enhance security.
+</Callout>
+
+  </Expandable>
+
+  <Expandable title="Why does login keep looping?">
+
+Clear your browser cache and cookies:
+
+<Tabs>
+  <Tab title="Chrome" icon="chrome">
+    Press `Ctrl+Shift+Delete` (Windows) or `Cmd+Shift+Delete` (macOS), select "Cookies and other site data" and "Cached images and files", then clear.
+  </Tab>
+  <Tab title="Firefox" icon="firefox">
+    Press `Ctrl+Shift+Delete` (Windows/Linux) or `Cmd+Shift+Delete` (macOS), check "Cookies" and "Cache", then clear.
+  </Tab>
+  <Tab title="Safari" icon="apple">
+    Go to Safari > Preferences > Privacy > Manage Website Data, search for FastMindMap, and remove.
+  </Tab>
+</Tabs>
+
+If issues persist, try incognito mode or a different browser.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Map Editing Tips
+
+Enhance your productivity with these editing shortcuts and best practices.
+
+<Callout kind="info">
+  Use `Ctrl+Z` (`Cmd+Z` on macOS) to undo changes instantly during editing sessions.
+</Callout>
+
+<Expandable title="How can I style nodes efficiently?">
+
+1. Select multiple nodes with `Shift+Click`.
+2. Apply styles like colors (`#f7c527` for brand yellow) or shapes via the toolbar.
+3. Save styles as presets for reuse.
+
+For advanced styling:
+
+```javascript
+// Example: Export styled node data (for developers)
+const node = {
+  id: "node-1",
+  text: "Central Idea",
+  color: "#f7c527",
+  shape: "ellipse",
+  metadata: { priority: "high" }
+};
+```
+
+  </Expandable>
+
+## Export Troubleshooting
+
+Exports fail due to large maps or browser limits. Optimize before exporting.
+
+<Steps>
+  <Step title="Simplify Map" icon="minimize-2">
+    Collapse branches and remove unused nodes to reduce file size.
+  </Step>
+  <Step title="Choose Format" icon="download">
+    Select PDF for print-quality or PNG for images.
+  </Step>
+  <Step title="Export" icon="file-text">
+    Use `File > Export` and monitor progress.
+  </Step>
+</Steps>
+
+| Issue | Solution |
+|-------|----------|
+| PDF too large | Reduce resolution to `300 DPI` |
+| Image blurry | Increase size to `1920x1080` |
+| Word export fails | Ensure Microsoft Word is updated |
+
+## Performance Optimization
+
+Slow performance affects large maps. Follow these tips:
+
+<ExpandableGroup>
+  <Expandable title="Clear Cache Regularly">
+
+Delete temporary files:
+
+```bash
+# On macOS/Linux
+rm -rf ~/.fastmindmap/cache
+
+# On Windows
+del /s /q %APPDATA%\FastMindMap\cache
+```
+
+  </Expandable>
+
+  <Expandable title="Hardware Recommendations">
+
+Run FastMindMap smoothly with:
+
+- 8GB+ RAM
+- Modern browser (Chrome 100+)
+- SSD storage
+
+<Callout kind="success">
+  Enable hardware acceleration in browser settings for `>30%` faster rendering.
+</Callout>
+
+  </Expandable>
+</ExpandableGroup>
+
+For further help, contact support at `support@fastmindmap.com` with your map ID and browser details.
